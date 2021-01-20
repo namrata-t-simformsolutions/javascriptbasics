@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="calculate.js"></script>
+</head>
+<body>
+	<form name="calcform">
+	<table>
+		<tr><td><label>Number 1:</label></td>
+		<td><input type="number" id="no1" required></td></tr>
+
+		<tr><td><label>Number 2:</label></td>
+			<td><input type="number" id="no2" required></td></tr>
+
+		<tr><td><label>Operator:</label></td>
+		<td><select name="operator" id="operator" required>
+			<option value="+">+</option>
+    	<option value="-">-</option>
+    	<option value="*">*</option>
+    	<option value="/">/</option>
+		</select></td></tr>
+
+		<tr></tr><tr><td></td><td><input class="button" type="submit" value="Calculate" onclick="calc(this)"></td>
+			<td><input type="reset" value="Reset" class="button"></td></tr>
+	</table>
+</form>
+</body>
+</html>

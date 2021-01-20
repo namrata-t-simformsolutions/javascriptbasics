@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+            var s = "Namrata Thaker";
+            document.write("length: "+s.length+"<br/>");
+            document.write("index of A: "+s.indexOf("a")+"<br/>");
+            document.write("Lastindex of A: "+s.lastIndexOf("a")+"<br/>");
+            document.write("To lower: "+s.toLowerCase()+"<br/>");
+            document.write("To upper: "+s.toUpperCase()+"<br/>");
+            //document.write("To lower: "+s.toLocaleLowerCase()+"<br/>");
+            document.write("Replace: "+s.replace("Namrata","vidisha")+"<br/><br/>");
+
+            //math object
+            document.write(Math.PI+"<br/>");
+            document.write(Math.sqrt(1024)+"<br/>");
+            document.write(Math.pow(2,8)+"<br/>");
+            document.write(Math.floor(3.8)+"<br/>");
+            document.write(Math.ceil(3.2)+"<br/>");
+            document.write(Math.round(3.6)+"<br/><br/><br/>");
+
+            //array object
+            var a = new Array(17,09,"Namrata");
+            document.write("Array:"+a+"<br/>");
+            document.write(a.length+"<br/>");
+            document.write(a[0]+" "+a[1]+" "+a[2]+"<br/>");
+
+            //second method to declare array
+            var b = [17,09,"Namrata"];
+            document.write("Array b:"+b+"<br/><br/>");
+
+            //array concat
+            var c = [20,30];
+            a = a.concat(c,13,17);
+            document.write(a+"<br/>");
+            //reverse & join array
+            document.write(a.reverse()+"<br/>");
+            document.write(a.join("_")+"<br/>");
+
+            //delete array elements
+            delete(a[0]);
+            document.write(a+"<br/>");
+        </script>
+    </head>
+</html>

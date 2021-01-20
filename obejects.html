@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script>
+            //accessing details by creating objects
+            var bookreview = new Object()
+            bookreview.title = "11 minutes";
+            bookreview.text = "It is awesome!";
+            bookreview.category = "fiction";
+
+            document.write(bookreview.title+"<br/>");
+            document.write(bookreview.category+"<br/>");
+
+            //by using functions
+            function review(title,text){
+                this.title = title;
+                this.text = text;
+            }
+            var br = new review("11 minutes", "Must read");
+            document.write(br.title+"<br/>");
+            document.write(br.text+"<br/>");
+            // or add function to an object that is easy way
+            /* function review(title,text){
+                document.write(this.title+"<br/>");
+                document.write(this.text+"<br/>");
+            }
+            var br = new review("11 minutes", "Must read");
+            
+            */
+
+            //create object using literal constructor
+            var blog ={
+                title:"java",
+                text1:"Is a object oriented language",
+                displayDetails:function(){
+                    document.write(this.title+"<br/>");
+                    documet.write(this.text1+"<br/>");
+                }
+            };
+            blog.displayDetails();
+
+        </script>
+    </head>
+</html>

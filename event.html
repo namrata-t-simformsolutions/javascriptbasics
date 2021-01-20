@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script>
+            function handleMouseOverEvent(x){
+                x.style.color = "red";
+                x.style.backgroundColor = "pink";
+                x.innerHTML = "MOUSEOVER";
+            }
+            function handleMouseOutEvent(y){
+                y.style.color = "yellow";
+                y.style.backgroundColor = "blue";
+                y.innerHTML = "MOUSEOUT";
+            }
+            function onchangeEvent(a)
+            {
+                window.location = a;
+            }
+            function onchangeEventImage(a)
+            {
+                document.body.style.backgroundImage = "url('"+a+"')";
+            }
+            function handleOnFocus(x){
+                x.style.color = "red";
+                x.style.backgroundColor = "blue";
+            }
+            function handleOnBlur(x){
+                x.style.color = "blue";
+                x.style.backgroundColor = "red";
+            }
+            
+        </script>
+    </head>
+    <body>
+        <p onmouseover="handleMouseOverEvent(this)" onmouseout="handleMouseOutEvent(this)">mouseover event</p>
+        <select name="website" id="web" onchange="onchangeEvent(this.value)">
+            <option value="https://www.w3schools.com/js/DEFAULT.asp">javascript</option>
+            <option value="https://www.w3schools.com/css/">Css</option>
+        </select>
+
+        <select name="images" id="img" onchange="onchangeEventImage(this.value)">
+            <option value="">image</option>
+            <option value="images/feedback.jpg">feedback</option>
+            
+        </select><br><br>
+        <input type="text" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)"><br><br>
+        
+    </body>
+</html>
