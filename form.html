@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function validate()
+		{
+			var textarea = document.getElementById('desc').value;
+			var valid = false;
+			var valid1 = false;
+			var gender = document.feedbackform.gender;
+			if(textarea == "")
+			{
+				alert("Description required");
+				document.getElementById('desc').focus();
+				return false;
+			}
+			
+			if(document.getElementById("comments").checked)
+			{
+				valid = true;
+			}
+			else if(document.getElementById("suggestions").checked)
+			{
+				valid = true;
+			}	
+			else if(document.getElementById("Questions").checked)
+			{
+				valid = true;
+			}	
+			if(valid==false){
+				alert("please select anyone feedback type");
+				return false;
+			}
+			for(var i=0;i<gender.length;i++){
+				if(gender[i].checked){
+					valid1 = true;
+					break;
+				}
+			}
+			if(valid1==false){
+				alert("Select the gender!");
+				return false;
+			}
+			else{
+				return true;
+			}	
+		}
+	</script>
+</head>
+<body>
+<center>
+	<header>
+	<div class="heading">Feedback Form</div> <br>
+	<img src="feedback1.jpg" style="height: 80px; float: right; width: 200px;">
+	<div style="font-size: 1.3em;">
+	We would love to hear your suggestions,comments,thoughts or any problems so that we can improve!</div>
+
+</header>
+		<div class="section"><table>
+	<form name="feedbackform" action="thanks.html" onsubmit="return validate()">
+		<tr>
+		<td><label>Feedback type:</label></td>
+		
+		<td> <input type="checkbox" id="comments">
+  <label for="comments">Comment</label></td>
+  <td><input type="checkbox" id="suggestions">
+  <label for="suggestions"> sugesstion</label></td>
+  <td><input type="checkbox"  id="Questions">
+  <label for="Questions"> question</label></td></tr>
+		<tr><td><label>Describe your Feedback:</label></td>
+		<td><textarea id="desc"> </textarea></td></tr>
+	<tr><td><label>Name:</label></td>
+	<td><input type="text" name="fistname" placeholder="Firstname" required></td>
+	<td><input type="text" name="lastname" placeholder="Lastname" required></td></tr><br><br>
+	<tr><td><label>Gender:</label><br></td>
+	<td><input type="radio" id="male" name="gender" value="male">
+	<label for="male">Male</label></td>
+  <td><input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label></td>
+  <td><input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label></td></tr>
+	<tr><td><label>Email:</label></td>
+	<td><input type="Email" name="email" required placeholder="example@xyz.com"></td></tr>
+
+	<tr></tr><tr><td></td><td><input class="button" type="submit" value="Submit"></td>
+	<td><input type="reset" value="Reset" class="button"></td></tr>
+
+
+
+	</form>
+	</table>
+</div>
+</center>
+
+</body>
+</html>

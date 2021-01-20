@@ -1,0 +1,57 @@
+body{
+	background-color: white;
+}
+header{
+	margin-top: 150px;
+	background-color: #2E8B57;
+	color: white;
+	margin: 0 outline;
+	padding: 15px;
+	width: 600px;
+	height: 180px;
+	position: center;
+}
+.heading{
+	
+	font-size: 4em;
+}
+table{
+	margin-top: 5px;
+	margin: 0 auto;
+	outline-color: grey;
+	outline: 1px;	
+	font-size: 1.2em;
+}
+.section{
+	float: center;
+	background-color: #F5F5F5;
+	width: 630px;
+	height: 310px;
+
+}
+.button{
+	margin-top: 30px;
+	height: 40px; 
+	width: 110px; 
+	background-color: lightgreen;
+	font-size: 1.2em;
+	border: 2px white;
+	border-radius: 4px;
+}
+input[type=text], input[type=Email]{
+	height: 25px;
+	border-radius: 4px;
+	 border: 1px white;
+	 padding: 5px;
+}
+
+textarea {
+  width: 160px;
+  height: 45px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px white;
+  border-radius: 4px;
+  resize: none;
+}
+
